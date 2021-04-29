@@ -1,0 +1,21 @@
+ALGORITHM insert_sorting
+VAR
+    tab : ARRAY_OF INTEGER [1000];
+    val,i,j:INTEGER;
+    check: BOOLEAN;
+BEGIN
+    FOR i FROM 1 TO tab.length.1  DO
+        READ(val);
+        check:=false;
+        j:=tab.length;
+        WHILE(j>0 AND check=false)
+            IF (tab[j-1]>val ) THEN
+                tab[j]=tab[j-1];
+                j:=j-1;
+            ELSE
+                check:=true;
+            END_IF
+        END_WHILE
+    tab[j]=val
+    END_FOR
+END
